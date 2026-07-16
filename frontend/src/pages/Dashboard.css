@@ -1,0 +1,31 @@
+.dash-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); margin-bottom: var(--space-xl); }
+.dash-stat-card { display: flex; align-items: center; gap: var(--space-md); }
+.dash-stat-icon { width: 48px; height: 48px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.dash-stat-value { font-family: var(--font-display); font-size: 28px; font-weight: 800; }
+.dash-stat-label { font-size: 13px; color: var(--text-tertiary); }
+.dash-table-wrap { overflow-x: auto; }
+.dash-table { width: 100%; border-collapse: collapse; }
+.dash-table th { text-align: left; padding: 12px 14px; font-size: 12px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--border-color); }
+.dash-table td { padding: 14px; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.03); color: var(--text-secondary); }
+.dash-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+/* Admin */
+.admin-grid { display: grid; grid-template-columns: 240px 1fr; gap: var(--space-lg); min-height: calc(100vh - var(--navbar-height) - 64px); }
+.admin-sidebar { display: flex; flex-direction: column; gap: 4px; }
+.admin-sidebar-link {
+  display: flex; align-items: center; gap: var(--space-sm); padding: 12px 16px;
+  border-radius: var(--radius-sm); font-size: 14px; font-weight: 500;
+  color: var(--text-secondary); cursor: pointer; transition: all var(--transition-fast);
+  background: none; border: none; width: 100%; text-align: left; font-family: inherit;
+}
+.admin-sidebar-link:hover { background: rgba(255,255,255,0.05); color: var(--text-primary); }
+.admin-sidebar-link.active { background: rgba(59,130,246,0.1); color: var(--accent-light); border-left: 3px solid var(--accent); }
+.admin-content { flex: 1; }
+.admin-stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-md); margin-bottom: var(--space-xl); }
+
+@media (max-width: 768px) {
+  .dash-stats { grid-template-columns: 1fr; }
+  .admin-grid { grid-template-columns: 1fr; }
+  .admin-sidebar { flex-direction: row; overflow-x: auto; }
+  .admin-stat-grid { grid-template-columns: repeat(2, 1fr); }
+}

@@ -1,0 +1,70 @@
+export const providers = [
+  {
+    id: 'indane',
+    name: 'Indane Gas',
+    parentCompany: 'Indian Oil Corporation Limited (IOCL)',
+    description: 'Indane is the leading LPG brand in India, managed by Indian Oil Corporation — the largest commercial enterprise in India. With a vast network of distributors across the country, Indane ensures reliable and timely delivery of LPG cylinders to millions of households.',
+    customerCare: '1800-2333-555',
+    website: 'https://www.iocl.com',
+    color: '#e44d26',
+    colorLight: 'rgba(228, 77, 38, 0.15)',
+    gradient: 'linear-gradient(135deg, #e44d26, #ff6b35)',
+    logo: '🔥',
+    cylinders: ['DOMESTIC', 'COMMERCIAL', 'FIVEKG'],
+  },
+  {
+    id: 'hp',
+    name: 'HP Gas',
+    parentCompany: 'Hindustan Petroleum Corporation Limited (HPCL)',
+    description: 'HP Gas is the premium LPG brand of Hindustan Petroleum Corporation Limited. Known for its efficient supply chain and customer-centric services, HP Gas provides safe and affordable cooking fuel to millions across India.',
+    customerCare: '1800-2333-666',
+    website: 'https://www.hindustanpetroleum.com',
+    color: '#00a651',
+    colorLight: 'rgba(0, 166, 81, 0.15)',
+    gradient: 'linear-gradient(135deg, #00a651, #00c853)',
+    logo: '⛽',
+    cylinders: ['DOMESTIC', 'COMMERCIAL', 'FIVEKG'],
+  },
+  {
+    id: 'bharat',
+    name: 'Bharat Gas',
+    parentCompany: 'Bharat Petroleum Corporation Limited (BPCL)',
+    description: 'Bharat Gas, operated by Bharat Petroleum Corporation Limited, is one of India\'s most trusted LPG brands. With a robust distribution network, it provides quality LPG services to both domestic and commercial consumers nationwide.',
+    customerCare: '1800-224-344',
+    website: 'https://www.bharatpetroleum.in',
+    color: '#0066b3',
+    colorLight: 'rgba(0, 102, 179, 0.15)',
+    gradient: 'linear-gradient(135deg, #0066b3, #2196f3)',
+    logo: '🛢️',
+    cylinders: ['DOMESTIC', 'COMMERCIAL', 'FIVEKG'],
+  },
+];
+
+export const cylinderTypes = {
+  DOMESTIC: {
+    id: 'DOMESTIC',
+    name: '14.2 kg Domestic LPG Cylinder',
+    shortName: '14.2 kg Domestic',
+    weight: '14.2 kg',
+    description: 'Standard domestic cooking gas cylinder for household use',
+    icon: '🏠',
+  },
+  COMMERCIAL: {
+    id: 'COMMERCIAL',
+    name: '19 kg Commercial LPG Cylinder',
+    shortName: '19 kg Commercial',
+    weight: '19 kg',
+    description: 'Commercial cylinder for restaurants, hotels, and businesses',
+    icon: '🏢',
+  },
+  FIVEKG: {
+    id: 'FIVEKG',
+    name: '5 kg Free Trade (Chhotu) Cylinder',
+    shortName: '5 kg Chhotu',
+    weight: '5 kg',
+    description: 'Portable lightweight cylinder for small households and travel',
+    icon: '🎒',
+  },
+};
+
+export const getProviderById = (id) => providers.find(p => p.id === id);
