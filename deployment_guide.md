@@ -54,8 +54,15 @@ Both Vercel and Render deploy directly from your GitHub repositories.
    - **Instance Type**: Free
 5. Click **Create Web Service**.
 6. Render will automatically detect the `Dockerfile` in your backend folder, build the Java app, and deploy it. This usually takes 5-10 minutes.
-7. Once it says "Live", copy the URL provided at the top left (e.g., `https://quickcylinder-api.onrender.com`).
-8. **Important**: Add `/api` to the end of this URL. Your final backend URL is: `https://quickcylinder-api.onrender.com/api`
+7. **Add your Database Credentials to Render:**
+   - On your Render Web Service page, click **Environment** in the left sidebar.
+   - Click **Add Environment Variable** and add these exactly:
+     - Key: `DB_URL` | Value: `jdbc:mysql://mysql-108d568f-myproject1304.f.aivencloud.com:18415/defaultdb?sslMode=REQUIRED`
+     - Key: `DB_USER` | Value: `avnadmin`
+     - Key: `DB_PASSWORD` | Value: `<YOUR_AIVEN_PASSWORD_HERE>`
+   - Click **Save Changes**. Render will automatically redeploy with the correct live database!
+8. Once it says "Live", copy the URL provided at the top left (e.g., `https://quickcylinder-api.onrender.com`).
+9. **Important**: Add `/api` to the end of this URL. Your final backend URL is: `https://quickcylinder-api.onrender.com/api`
 
 ---
 
