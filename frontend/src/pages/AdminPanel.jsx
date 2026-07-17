@@ -31,7 +31,7 @@ export default function AdminPanel() {
 
   useEffect(() => {
     const fetchData = async () => {
-      try {linder 
+      try {
         const [usersRes, bookingsRes] = await Promise.all([
           api.get('/admin/users'),
           api.get('/admin/bookings')
